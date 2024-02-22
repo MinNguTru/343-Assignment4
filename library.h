@@ -1,3 +1,5 @@
+#ifndef LIBRARY_H
+#define LIBRARY_H
 #include "book.h"
 #include "patron.h"
 #include "date.h"
@@ -13,11 +15,13 @@ public:
     void addPatron(int ID, string lastName, string firstName);
     void addBook(int bookID, Date publicationDate, string bookTitle, string bookAuthor, char bookCategory, int copiesAvailable);
     void readBookfile(ifstream &bookFile);
-    static int createBookID() const;
+    static int createBookID();
 
 private:
-    Book[] periodicBooks;
-    Book[] fictionalBooks;
-    Book[] childrensBooks;
-    Patron[] patrons;
-}
+    Patron patrons[];
+    Book periodicBooks[];
+    Book fictionalBooks[];
+    Book childrensBooks[];
+};
+
+#endif

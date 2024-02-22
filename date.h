@@ -1,4 +1,5 @@
-
+#ifndef DATE_H
+#define DATE_H
 using namespace std;
 
 class Date
@@ -12,4 +13,6 @@ public:
 private:
     int year;
     int month;
-}
+};
+
+#endif

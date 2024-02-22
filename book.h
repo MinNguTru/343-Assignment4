@@ -1,6 +1,7 @@
 #ifndef BOOK_H
 #define BOOK_H
 #include "date.h"
+#include "patron.h"
 #include <iostream>
 using namespace std;
 
@@ -10,11 +11,11 @@ public:
     Book(int bookID, Date DatepublicationDate, string bookTitle, string bookAuthor, char bookCategory,
          int copiesAvailable);
     ~Book();
-    void checkStatus();
+    void display();
     Date getDate();
     void setDate();
-    bool setPatron(int patronID);
-    Patron getPatron();
+    bool addPatron(int patronID);
+    bool hasPatron();
     bool removePatron();
 
 private:
@@ -23,7 +24,7 @@ private:
     string bookTitle;
     string bookAuthor;
     char bookCategory;
-    Patron[] patronsAssociated;
+    Patron *patronsAssociated[];
     int copiesAvailable;
     bool checkedOut;
 };

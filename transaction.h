@@ -1,13 +1,13 @@
-#include "pateron.h"
+#include "book.h"
 #ifndef TRANSACTION_H
 #define TRANSACTION_H
 #include <iostream>
 using namespace std;
 
-class Transaction {
+class Transaction
+{
 public:
-    Transaction();
-    Transaction(Pateron pateron, Book book);
+    Transaction(string transactionType, Book book);
     ~Transaction();
 
     // Display information
@@ -16,9 +16,8 @@ public:
     void transactionInfo();
 
 private:
-    Patreon patreon;
-    Book book;
-    bool checkOut; // True if order is checked out, false if returned
+    Book *book;
+    string transactionType;
 };
 
 #endif
