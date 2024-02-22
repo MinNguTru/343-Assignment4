@@ -20,7 +20,7 @@ private:
     string lastName;
     string firstName;
     Transaction allTransactions[100];
-    Library library;
+    Library *library;
 };
 
 #endif
