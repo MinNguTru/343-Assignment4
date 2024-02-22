@@ -7,16 +7,17 @@ using namespace std;
 class Transaction {
 public:
     Transaction();
-    Transaction(Pateron* pateron, Book* book);
+    Transaction(Pateron pateron, Book book);
     ~Transaction();
-    bool returnBook();
-    bool checkOutBook();
+
+    // Display information
+    void checkOutInfo();
     void bookInfo();
     void transactionInfo();
 
 private:
-    Patreon* patreon;
-    Book* book;
+    Patreon patreon;
+    Book book;
     bool checkOut; // True if order is checked out, false if returned
 };
 
