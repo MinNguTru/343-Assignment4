@@ -1,11 +1,15 @@
 #ifndef BOOK_H
 #define BOOK_H
+#include "date.h"
 #include <iostream>
 using namespace std;
 
 class Book
 {
 public:
+    Book(int bookID, Date DatepublicationDate, string bookTitle, string bookAuthor, char bookCategory,
+         int copiesAvailable);
+    ~Book();
     void checkStatus();
     Date getDate();
     void setDate();
