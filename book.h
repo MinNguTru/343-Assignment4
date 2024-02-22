@@ -24,7 +24,7 @@ private:
     string bookTitle;
     string bookAuthor;
     char bookCategory;
-    Patron *patronsAssociated[];
+    Patron *patronsAssociated[100];
     int copiesAvailable;
     bool checkedOut;
 };
